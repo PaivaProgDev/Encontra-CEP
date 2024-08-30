@@ -1,0 +1,147 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", "sans-serif";
+}
+
+body {
+  width: 100%;
+  max-width: 100%;
+  font-weight: 200;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(238, 238, 238);
+  transition: 250ms ease-in-out;
+}
+body.dark-mode {
+  background-color: rgb(53, 53, 53);
+}
+body .container {
+  width: 100%;
+  max-width: 30rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin: 3.5rem 15px;
+}
+body .container .content-cep {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  text-align: center;
+  padding: 2rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  -webkit-box-shadow: 6px 6px 27px -8px rgb(79, 79, 79);
+  -moz-box-shadow: 6px 6px 27px -8px rgb(79, 79, 79);
+  box-shadow: 6px 6px 27px -8px rgb(79, 79, 79);
+  background-color: #fff;
+  border-left: solid 4px rgb(55, 124, 202);
+}
+body .container .content-cep .message-cep2 {
+  visibility: hidde;
+}
+body .container .content-cep .title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: space-between;
+  color: rgb(55, 124, 202);
+  font-size: 2rem;
+}
+body .container .content-cep .title ion-icon {
+  background-color: rgb(55, 124, 202);
+  padding: 8px;
+  border-radius: 50px;
+  color: #fff;
+  font-size: 1.3rem;
+}
+body .container .content-cep .message-cep {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: rgba(255, 0, 0, 0.685);
+  opacity: 0;
+}
+body .container .content-cep .message-cep.message-active {
+  opacity: 1;
+}
+body .container .content-cep #insert-cep-input {
+  display: flex;
+  padding: 8px 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: solid 0.9px rgb(55, 124, 202);
+  box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.116);
+  outline-color: rgb(55, 124, 202);
+  letter-spacing: 1px;
+  font-weight: 600;
+  color: rgb(53, 53, 53);
+  width: 100%;
+  max-width: 10rem;
+}
+body .container .content-cep #insert-cep-input::placeholder {
+  font-size: 12px;
+  color: rgba(128, 128, 128, 0.705);
+  letter-spacing: 0.2px;
+}
+body .container .content-cep #insert-cep-input::-webkit-outer-spin-button, body .container .content-cep #insert-cep-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+body .container .content-cep .footer-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+body .container .content-cep .footer-card .icon-dark {
+  font-size: 2rem;
+  border-radius: 50px;
+  padding: 5px;
+  color: rgb(53, 53, 53);
+  cursor: pointer;
+  transition: 250ms ease-in-out;
+  background-color: rgb(233, 233, 233);
+}
+body .container .content-data {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+body .container .content-data li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-left: solid 4px rgb(55, 124, 202);
+  border-radius: 0 5px 5px 0;
+  padding: 10px 8px;
+  width: 100%;
+  background-color: #fff;
+}
+body .container .content-data li p {
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+body .container .content-data li span {
+  font-weight: 600;
+  color: rgb(63, 63, 63);
+  font-size: 0.85rem;
+}
+
+@media screen and (max-width: 388px) {
+  .title {
+    flex-direction: column;
+    text-align: center;
+  }
+  .footer-card {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .content-cep {
+    gap: 0.4rem;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

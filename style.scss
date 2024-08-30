@@ -1,0 +1,167 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+@import './variables.scss';
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: $primary-font;
+}
+
+body {
+   width: 100%;
+   max-width: 100%;
+   font-weight: 200;
+   display: flex;
+   justify-content: center;
+   background-color: $default-color;
+   transition: 250ms ease-in-out;
+
+   &.dark-mode {
+      background-color: $dark-color;
+   }
+
+   .container {
+      width: 100%;
+      max-width: 30rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      margin: 3.5rem 15px;
+
+      .content-cep {
+         display: flex;
+         flex-direction: column;
+         gap: 1.5rem;
+         text-align: center;
+         padding: 2rem;
+         border-radius: 10px;
+         margin-bottom: 2rem;
+         -webkit-box-shadow: 6px 6px 27px -8px rgba(79, 79, 79, 1);
+         -moz-box-shadow: 6px 6px 27px -8px rgba(79, 79, 79, 1);
+         box-shadow: 6px 6px 27px -8px rgba(79, 79, 79, 1);
+         background-color: #fff;
+         border-left: solid 4px $primary-color;
+
+         .message-cep2 {
+            visibility: hidde;
+         }
+
+         .title {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            justify-content: space-between;
+            color: $primary-color;
+            font-size: 2rem;
+
+            ion-icon {
+               background-color: $primary-color;
+               padding: 8px;
+               border-radius: 50px;
+               color: #fff;
+               font-size: 1.3rem;
+            }
+         }
+
+         .message-cep {
+            font-weight: 600;
+            font-size: 0.90rem;
+            color: rgba(255, 0, 0, 0.685);
+            opacity: 0;
+
+            &.message-active {
+               opacity: 1;
+            }
+         }
+
+         #insert-cep-input {
+            display: flex;
+            padding: 8px 10px;
+            font-size: 1rem;
+            border-radius: 5px;
+            border: solid .9px $primary-color;
+            box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.116);
+            outline-color: $primary-color;
+            letter-spacing: 1px;
+            font-weight: 600;
+            color: $dark-color;
+            width: 100%;
+            max-width: 10rem;
+
+            &::placeholder {
+               font-size: 12px;
+               color: rgba(128, 128, 128, 0.705);
+               letter-spacing: 0.2px;
+            }
+
+            &::-webkit-outer-spin-button,
+            &::-webkit-inner-spin-button {
+               -webkit-appearance: none;
+            }
+         }
+
+         .footer-card {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .icon-dark {
+               font-size: 2rem;
+               border-radius: 50px;
+               padding: 5px;
+               color: $dark-color;
+               cursor: pointer;
+               transition: 250ms ease-in-out;
+               background-color: rgb(233, 233, 233);
+            }
+         }
+      }
+
+      .content-data {
+         display: flex;
+         flex-direction: column;
+         gap: 10px;
+         width: 100%;
+
+         li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-left: solid 4px $primary-color;
+            border-radius: 0 5px 5px 0;
+            padding: 10px 8px;
+            width: 100%;
+            background-color: #fff;
+
+            p {
+               font-weight: 400;
+               font-size: .9rem;
+            }
+
+            span {
+               font-weight: 600;
+               color: rgb(63, 63, 63);
+               font-size: .85rem;
+            }
+         }
+      }
+   }
+}
+
+@media screen and (max-width: 388px) {
+   .title {
+      flex-direction: column;
+      text-align: center;
+   }
+
+   .footer-card {
+      flex-direction: column;
+      gap: 20px;
+   }
+
+   .content-cep {
+      gap: 0.4rem;
+   }
+}

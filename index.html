@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="./css/main.css">
+   <title>Buscador de CEP</title>
+</head>
+
+<body>
+   <section class="container">
+
+      <div class="content-cep">
+         <h1 class="title">Buscador de CEP
+            <ion-icon name="home-sharp"></ion-icon>
+         </h1>
+         <p class="message-cep">CEP não encontrado</p>
+         <footer class="footer-card">
+            <input oninput="buscarCep()" id="insert-cep-input" placeholder="Digite 8 números" type="number"
+               maxlength="8">
+            <ion-icon onclick="themeMode()" class="icon-dark" name="contrast-outline"></ion-icon>
+         </footer>
+      </div>
+      <ul class="content-data">
+         <li class="estado">
+            <span>Estado: </span>
+            <p></p>
+         </li>
+         <li class="rua">
+            <span>Rua: </span>
+            <p></p>
+         </li>
+         <li class="bairro">
+            <span>Bairro: </span>
+            <p></p>
+         </li>
+         <li class="cidade">
+            <span>Cidade: </span>
+            <p></p>
+         </li>
+      </ul>
+   </section>
+
+   <script src="./script/main.js"></script>
+   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
